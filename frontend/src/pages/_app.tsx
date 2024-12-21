@@ -166,7 +166,7 @@ App.getInitialProps = async ({ ctx }: { ctx: GetServerSidePropsContext }) => {
   };
 
   if (ctx.req) {
-    const apiURL = process.env.API_URL || "http://localhost:8080";
+    const apiURL = process.env.API_URL || "http://localhost:8089";
     const cookieHeader = ctx.req.headers.cookie;
 
     pageProps.user = await axios(`${apiURL}/api/users/me`, {

@@ -21,7 +21,7 @@ export async function middleware(request: NextRequest) {
   };
 
   // Get config from backend
-  const apiUrl = process.env.API_URL || "http://localhost:8080";
+  const apiUrl = process.env.API_URL || "http://localhost:8089";
   const config = await (await fetch(`${apiUrl}/api/configs`)).json();
 
   const getConfig = (key: string) => {

@@ -3,7 +3,7 @@
             trusted_proxies 0.0.0.0/0
     }
 
-    reverse_proxy /api/* http://localhost:{$BACKEND_PORT:8080}  {
+    reverse_proxy /api/* http://localhost:{$BACKEND_PORT:8089}  {
             trusted_proxies 0.0.0.0/0
     }
 
