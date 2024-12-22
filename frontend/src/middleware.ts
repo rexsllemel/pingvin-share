@@ -21,7 +21,7 @@ export async function middleware(request: NextRequest) {
   };
 
   // Get config from backend
-  const apiUrl = process.env.API_URL || "http://localhost:8089";
+  const apiUrl = process.env.API_URL || "https://zw84wkssos8woss80wcs8wsc.faithcloud.net";
   const config = await (await fetch(`${apiUrl}/api/configs`)).json();
 
   const getConfig = (key: string) => {

@@ -8,7 +8,7 @@ export const config = {
   },
 };
 
-const apiURL = process.env.API_URL || "http://localhost:8089";
+const apiURL = process.env.API_URL || "https://zw84wkssos8woss80wcs8wsc.faithcloud.net";
 
 // A proxy to the API server only used in development.
 // In production this route gets overridden by Caddy.

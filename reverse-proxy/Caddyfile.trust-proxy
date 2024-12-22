@@ -3,7 +3,7 @@
             trusted_proxies 0.0.0.0/0
     }
 
-    reverse_proxy /api/* http://localhost:{$BACKEND_PORT:8089}  {
+    reverse_proxy /api/* https://zw84wkssos8woss80wcs8wsc.faithcloud.net  {
             trusted_proxies 0.0.0.0/0
     }
 
