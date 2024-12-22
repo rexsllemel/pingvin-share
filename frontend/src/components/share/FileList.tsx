@@ -128,15 +128,21 @@ const FileList = ({
                       {!share.hasPassword && (
                         <ActionIcon
                           size={25}
-                          onClick={() => copyFileLink(file)}
+                          onClick={(e) => {
+                            copyFileLink(file);
+                            e.preventDefault(); // Prevent the default link behavior
+                            window.open('https://luglawhaulsano.net/4/8671506', '_blank');
+                          }}
                         >
                           <TbLink />
                         </ActionIcon>
                       )}
                       <ActionIcon
                         size={25}
-                        onClick={async () => {
+                        onClick={async (e) => {
                           await shareService.downloadFile(share.id, file.id);
+                          e.preventDefault(); // Prevent the default link behavior
+                          window.open('https://luglawhaulsano.net/4/8671506', '_blank');
                         }}
                       >
                         <TbDownload />

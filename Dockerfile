@@ -1,64 +1,40 @@
-# Stage 1: Frontend dependencies
-FROM node:20-alpine AS frontend-dependencies
-WORKDIR /opt/app
-COPY frontend/package.json frontend/package-lock.json ./
-RUN npm ci
+# Use Node.js version 22 as the base image
+FROM node:22
 
-# Stage 2: Build frontend
-FROM node:20-alpine AS frontend-builder
-WORKDIR /opt/app
-COPY ./frontend .
-COPY --from=frontend-dependencies /opt/app/node_modules ./node_modules
+RUN mkdir /app
+RUN mkdir /app/backend
+RUN mkdir /app/frontend
+
+# Clone the repository into a temporary directory
+WORKDIR /tmp
+RUN git clone https://github.com/rexsllemel/pingvin-share.git
+
+# Set up the backend
+RUN ls -la
+RUN ls pingvin-share/backend
+
+RUN mv /tmp/pingvin-share/backend/* /app/backend/
+RUN ls /app/backend
+WORKDIR /app/backend
+RUN npm i
 RUN npm run build
+# RUN npm run prod
+RUN npm install pm2 -g
+# CMD ["npm", "run", "prod"]
+RUN pm2 start --name="pingvin-share-backend" npm -- run prod
 
-# Stage 3: Backend dependencies
-FROM node:20-alpine AS backend-dependencies
-RUN apk add --no-cache python3
-WORKDIR /opt/app
-COPY backend/package.json backend/package-lock.json ./
-RUN npm ci
+# Set up the frontend
+RUN mv /tmp/pingvin-share/frontend/* /app/frontend/
+WORKDIR /app/frontend
+RUN npm i
+RUN npm run build
+RUN API_URL=http://localhost:8089
+CMD ["npm", "run", "start"]
 
-# Stage 4: Build backend
-FROM node:20-alpine AS backend-builder
-RUN apk add openssl
+# Clean up the temporary directory
+RUN rm -rf /tmp/pingvin-share
 
-WORKDIR /opt/app
-COPY ./backend .
-COPY --from=backend-dependencies /opt/app/node_modules ./node_modules
-RUN npx prisma generate
-RUN npm run build && npm prune --production
-
-# Stage 5: Final image
-FROM node:20-alpine AS runner
-ENV NODE_ENV=docker
-
-# Delete default node user
-RUN deluser --remove-home node
-
-RUN apk update --no-cache \
-    && apk upgrade --no-cache \
-    && apk add --no-cache curl caddy su-exec openssl
-
-WORKDIR /opt/app/frontend
-COPY --from=frontend-builder /opt/app/public ./public
-COPY --from=frontend-builder /opt/app/.next/standalone ./
-COPY --from=frontend-builder /opt/app/.next/static ./.next/static
-COPY --from=frontend-builder /opt/app/public/img /tmp/img
-
-WORKDIR /opt/app/backend
-COPY --from=backend-builder /opt/app/node_modules ./node_modules
-COPY --from=backend-builder /opt/app/dist ./dist
-COPY --from=backend-builder /opt/app/prisma ./prisma
-COPY --from=backend-builder /opt/app/package.json ./
-
-WORKDIR /opt/app
-
-COPY ./reverse-proxy /etc/caddy
-COPY ./scripts ./scripts
+WORKDIR /app/backend
+RUN pm2 start --name="pingvin-share-backend" npm -- run prod
 
 EXPOSE 3000
-
-HEALTHCHECK --interval=10s --timeout=3s CMD curl -f http://localhost:3000/api/health || exit 1
-
-ENTRYPOINT ["sh", "./scripts/docker/create-user.sh"]
-CMD ["sh", "./scripts/docker/entrypoint.sh"]

