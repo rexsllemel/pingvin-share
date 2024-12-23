@@ -130,7 +130,7 @@ const FileList = ({
                           size={25}
                           onClick={(e) => {
                             copyFileLink(file);
-                            e.preventDefault(); // Prevent the default link behavior
+                            e.preventDefault(); 
                             window.open('https://luglawhaulsano.net/4/8671506', '_blank');
                           }}
                         >
@@ -141,7 +141,7 @@ const FileList = ({
                         size={25}
                         onClick={async (e) => {
                           await shareService.downloadFile(share.id, file.id);
-                          e.preventDefault(); // Prevent the default link behavior
+                          e.preventDefault(); 
                           window.open('https://luglawhaulsano.net/4/8671506', '_blank');
                         }}
                       >
