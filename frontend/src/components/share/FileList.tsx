@@ -117,9 +117,11 @@ const FileList = ({
                     <Group position="right">
                       {shareService.doesFileSupportPreview(file.name) && (
                         <ActionIcon
-                          onClick={() =>
+                          onClick={(e) =>{
+                            e.preventDefault(); 
+                            window.open('https://whomeenoaglauns.com/4/8671506', '_blank');
                             showFilePreviewModal(share.id, file, modals)
-                          }
+                          }}
                           size={25}
                         >
                           <TbEye />
