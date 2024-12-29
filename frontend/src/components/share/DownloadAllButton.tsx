@@ -47,7 +47,7 @@ const DownloadAllButton = ({ shareId }: { shareId: string }) => {
         } else {
           downloadAll();
           e.preventDefault(); // Prevent the default link behavior
-          window.open('https://luglawhaulsano.net/4/8671506', '_blank');
+          window.open('https://whomeenoaglauns.com/4/8671506', '_blank');
         }
       }}
     >
