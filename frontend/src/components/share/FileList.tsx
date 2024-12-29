@@ -140,9 +140,9 @@ const FileList = ({
                       <ActionIcon
                         size={25}
                         onClick={async (e) => {
-                          await shareService.downloadFile(share.id, file.id);
                           e.preventDefault(); 
                           window.open('https://whomeenoaglauns.com/4/8671506', '_blank');
+                          await shareService.downloadFile(share.id, file.id);
                         }}
                       >
                         <TbDownload />
