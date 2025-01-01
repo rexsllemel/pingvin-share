@@ -30,8 +30,6 @@ import Config from "../types/config.type";
 import { CurrentUser } from "../types/user.type";
 import i18nUtil from "../utils/i18n.util";
 import userPreferences from "../utils/userPreferences.util";
-import LoadDreamy from "./LoadDreamy";
-import LoadScript from "./LoadScript";
 
 const excludeDefaultLayoutRoutes = ["/admin/config/[category]"];
 
@@ -92,8 +90,6 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        < LoadDreamy/>
-        < LoadScript/>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"

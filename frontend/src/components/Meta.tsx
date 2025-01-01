@@ -1,7 +1,5 @@
 import Head from "next/head";
 import useConfig from "../hooks/config.hook";
-import LoadDreamy from "./LoadDreamy";
-import LoadScript from "./LoadScript";
 
 const Meta = ({
   title,
@@ -26,8 +24,6 @@ const Meta = ({
       />
       <meta name="twitter:title" content={metaTitle} />
       <meta name="twitter:description" content={description} />
-      < LoadDreamy/>
-      < LoadScript/>
     </Head>
   );
 };
