@@ -14,7 +14,7 @@ export default {
   "home.title": "Une plateforme de partage de fichiers <h>autohébergée</h>.",
   "home.description": "Voulez-vous vraiment remettre vos fichiers personnels dans les mains de tiers comme WeTransfer ?",
   "home.bullet.a.name": "Auto-hébergé",
-  "home.bullet.a.description": "Hébergez Pingvin Share sur votre propre machine.",
+  "home.bullet.a.description": "Hébergez Storify sur votre propre machine.",
   "home.bullet.b.name": "Confidentialité",
   "home.bullet.b.description": "Vos fichiers sont les vôtres et ne seront jamais consultés par des tiers.",
   "home.bullet.c.name": "Aucune rébarbative limite de taille",

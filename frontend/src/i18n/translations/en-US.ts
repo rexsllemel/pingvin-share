@@ -19,7 +19,7 @@ export default {
   "home.description":
     "Do you really want to give your personal files in the hand of third parties like WeTransfer?",
   "home.bullet.a.name": "Self-Hosted",
-  "home.bullet.a.description": "Host Pingvin Share on your own machine.",
+  "home.bullet.a.description": "Host Storify on your own machine.",
   "home.bullet.b.name": "Privacy",
   "home.bullet.b.description":
     "Your files are yours and will never be accessed by third parties.",
@@ -414,7 +414,7 @@ export default {
   "admin.config.general.app-name.description": "Name of the application",
   "admin.config.general.app-url": "App URL",
   "admin.config.general.app-url.description":
-    "On which URL Pingvin Share is available",
+    "On which URL Storify is available",
   "admin.config.general.secure-cookies": "Secure cookies",
   "admin.config.general.secure-cookies.description":
     "Whether to set the secure flag on cookies. If enabled, the site will not function when accessed over HTTP.",

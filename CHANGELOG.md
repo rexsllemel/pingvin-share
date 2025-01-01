@@ -594,7 +594,7 @@
 
 ### Bug Fixes
 
-* replace "pingvin share" with dynamic app name ([f55aa80](https://github.com/stonith404/pingvin-share/commit/f55aa805167f31864cb07e269a47533927cb533c))
+* replace "Storify" with dynamic app name ([f55aa80](https://github.com/stonith404/pingvin-share/commit/f55aa805167f31864cb07e269a47533927cb533c))
 * set password manually input not shown ([8ff417a](https://github.com/stonith404/pingvin-share/commit/8ff417a013a45a777308f71c4f0d1817bfeed6be))
 * show line breaks in txt preview ([37e765d](https://github.com/stonith404/pingvin-share/commit/37e765ddc7b19554bc6fb50eb969984b58bf3cc5))
 * upload file if it is 0 bytes ([f82099f](https://github.com/stonith404/pingvin-share/commit/f82099f36eb4699385fc16dfb0e0c02e5d55b1e3))

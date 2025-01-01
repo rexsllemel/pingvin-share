@@ -4,11 +4,11 @@ id: configuration
 
 # Configuration
 
-You can customize Pingvin Share by going to the configuration page in your admin dashboard `/admin/config`.
+You can customize Storify by going to the configuration page in your admin dashboard `/admin/config`.
 
 ## General
 
-The **General** Tab will let you customize your Pingvin Share instance to your liking.
+The **General** Tab will let you customize your Storify instance to your liking.
 
 ### App name
 
@@ -20,7 +20,7 @@ To make your App available trough your own **domain**, insert your specific doma
 
 ### Show home page
 
-If you don't like the **home page** Pingvin Share provides and you just want the upload tab to be the main page, toggle this to `true`.
+If you don't like the **home page** Storify provides and you just want the upload tab to be the main page, toggle this to `true`.
 
 ### Logo
 
@@ -50,9 +50,9 @@ For installation specific configuration, you can use environment variables. The 
 | `API_URL` | `http://localhost:8089` | The URL of the backend for the frontend. |
 
 #### Docker specific
-Environment variables that are only available when running Pingvin Share with Docker.
+Environment variables that are only available when running Storify with Docker.
 
 | Variable      | Default Value | Description                                                                                                 |
 | ------------- | ------------- | ----------------------------------------------------------------------------------------------------------- |
-| `TRUST_PROXY` | `false`       | Whether Pingvin Share is behind a reverse proxy. If set to `true`, the `X-Forwarded-For` header is trusted. |
-| `PUID` and `PGID` | `1000`       |  The user and group ID of the user who should run Pingvin Share inside the Docker container and owns the files that are mounted with the volume. You can get the `PUID` and `GUID` of your user on your host machine by using the command `id`. For more information see [this article](https://docs.linuxserver.io/general/understanding-puid-and-pgid/#using-the-variables). |
+| `TRUST_PROXY` | `false`       | Whether Storify is behind a reverse proxy. If set to `true`, the `X-Forwarded-For` header is trusted. |
+| `PUID` and `PGID` | `1000`       |  The user and group ID of the user who should run Storify inside the Docker container and owns the files that are mounted with the volume. You can get the `PUID` and `GUID` of your user on your host machine by using the command `id`. For more information see [this article](https://docs.linuxserver.io/general/understanding-puid-and-pgid/#using-the-variables). |

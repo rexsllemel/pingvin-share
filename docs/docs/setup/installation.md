@@ -9,7 +9,7 @@ id: installation
 1. Download the `docker-compose.yml` file
 2. Run `docker compose up -d`
 
-The website is now listening on `http://localhost:3000`, have fun with Pingvin Share 🐧!
+The website is now listening on `http://localhost:3000`, have fun with Storify 🐧!
 
 ### Installation with Portainer
 
@@ -19,7 +19,7 @@ The website is now listening on `http://localhost:3000`, have fun with Pingvin S
 4. Edit the external port and the environment variables (optional).
 5. Click on **Deploy the stack**.
 
-Your container is now listening on `http://localhost:<externalport>`, have fun with Pingvin Share 🐧!
+Your container is now listening on `http://localhost:<externalport>`, have fun with Storify 🐧!
 
 ### Stand-alone Installation
 
@@ -27,7 +27,7 @@ Required tools:
 
 - [Node.js](https://nodejs.org/en/download/) >= 16
 - [Git](https://git-scm.com/downloads)
-- [pm2](https://pm2.keymetrics.io/) for running Pingvin Share in the background
+- [pm2](https://pm2.keymetrics.io/) for running Storify in the background
 
 ```bash
 git clone https://github.com/stonith404/pingvin-share
@@ -50,6 +50,6 @@ API_URL=http://localhost:8089 # Set the URL of the backend, default: http://loca
 pm2 start npm --name "pingvin-share-frontend" -- run start
 ```
 
-**Uploading Large Files**: By default, Pingvin Share uses a built-in reverse proxy to reduce the installation steps. However, this reverse proxy is not optimized for uploading large files. If you wish to upload larger files, you can either use the Docker installation or set up your own reverse proxy. An example configuration for Caddy can be found in `./reverse-proxy/Caddyfile`.
+**Uploading Large Files**: By default, Storify uses a built-in reverse proxy to reduce the installation steps. However, this reverse proxy is not optimized for uploading large files. If you wish to upload larger files, you can either use the Docker installation or set up your own reverse proxy. An example configuration for Caddy can be found in `./reverse-proxy/Caddyfile`.
 
-The website is now listening on `http://localhost:3000`, have fun with Pingvin Share 🐧!
+The website is now listening on `http://localhost:3000`, have fun with Storify 🐧!

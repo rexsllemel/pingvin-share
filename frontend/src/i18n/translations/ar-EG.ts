@@ -14,7 +14,7 @@ export default {
   "home.title": "منصة لمشاركة الملفات <h>باستضافة ذاتية</h>.",
   "home.description": "أحقًا تريد تسليم ملفاتك الشخصية لطرف ثالث مثل WeTransfer؟",
   "home.bullet.a.name": "استضافة ذاتية",
-  "home.bullet.a.description": "قم باستضافة Pingvin Share على جهازك.",
+  "home.bullet.a.description": "قم باستضافة Storify على جهازك.",
   "home.bullet.b.name": "الخصوصية",
   "home.bullet.b.description": "Your files are yours and will never be accessed by third parties.",
   "home.bullet.c.name": "ليس هناك أية قيود على حجم الملفات",

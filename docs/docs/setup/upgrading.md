@@ -6,7 +6,7 @@ id: upgrading
 
 ### Upgrade to a new version
 
-As Pingvin Share is in early stage, see the release notes for breaking changes before upgrading.
+As Storify is in early stage, see the release notes for breaking changes before upgrading.
 
 #### Docker
 

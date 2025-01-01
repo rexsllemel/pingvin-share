@@ -302,7 +302,7 @@ export default {
   "admin.config.general.app-name": "App 名称",
   "admin.config.general.app-name.description": "自定义 App 的名称",
   "admin.config.general.app-url": "App 的地址",
-  "admin.config.general.app-url.description": "Pingvin Share 的 URL 地址",
+  "admin.config.general.app-url.description": "Storify 的 URL 地址",
   "admin.config.general.secure-cookies": "Secure cookies",
   "admin.config.general.secure-cookies.description": "Whether to set the secure flag on cookies. If enabled, the site will not function when accessed over HTTP.",
   "admin.config.general.show-home-page": "显示首页",
