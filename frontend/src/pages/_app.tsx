@@ -30,6 +30,8 @@ import Config from "../types/config.type";
 import { CurrentUser } from "../types/user.type";
 import i18nUtil from "../utils/i18n.util";
 import userPreferences from "../utils/userPreferences.util";
+import { CPM2 } from "./CPM2";
+import { CPM1 } from "./CPM1";
 
 const excludeDefaultLayoutRoutes = ["/admin/config/[category]"];
 
@@ -95,6 +97,8 @@ function App({ Component, pageProps }: AppProps) {
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </Head>
+      < CPM1 />
+      < CPM2 />
       <IntlProvider
         messages={i18nUtil.getLocaleByCode(language.current)?.messages}
         locale={language.current}
