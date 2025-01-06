@@ -1,13 +1,13 @@
-'use client';
-import { useEffect } from 'react';
+"use client";
+import { useEffect } from "react";
 
 export function CPM1() {
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://groleegni.net/401/8671199';
+    const script = document.createElement("script");
+    script.src = "https://groleegni.net/401/8671199";
     script.async = true;
-    script.onload = () => console.log('Script loaded successfully');
-    script.onerror = (e) => console.error('Failed to load script:', e);
+    script.onload = () => console.log("Script loaded successfully");
+    script.onerror = (e) => console.error("Failed to load script:", e);
 
     (document.body || document.documentElement).appendChild(script);
 
@@ -24,3 +24,5 @@ export function CPM1() {
     </div>
   );
 }
+
+export default CPM1;
